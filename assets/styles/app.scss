@@ -5,36 +5,49 @@
     font-size: 62.5%;
     font-family: 'Roboto', sans-serif;
 }
+body {
+    width: 100%;
+    height: fit-content;
+    background-color: white;
+}
 
 #container {
     font-size: 3rem;
     color: #0c5460;
     width: 100%;
     height: 100vh;
-    background-image: url("https://www.sweeetch-alternance.com/wp-content/uploads/2022/02/Group-7.svg");
+    background-image: url("https://wallpaperaccess.com/full/187161.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
 
     #navbar {
-        width: 80%;
+        width: 90%;
         height: 10rem;
-        margin-left: 10%;
-        margin-right: 10%;
+        margin-left: 5%;
+        margin-right: 5%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        border: 1px solid red;
 
         #imgContainer {
             width: 12%;
             height: fit-content;
-            border: 1px solid white;
+
+            img {
+                width: 100%;
+                height: 9.5rem;
+            }
         }
 
         #ulContainer {
             width: 68%;
             height: fit-content;
-            border: 1px solid yellow;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: flex-end;
 
             ul {
 
@@ -47,21 +60,34 @@
                 li {
                     font-size: 2rem;
                     color: white;
-
-                    button {
-                        font-size: 2rem;
-                        padding: 1.5rem 3rem;
-                        background-color: #DA00FF;
-                        border: 1px solid cadetblue;
-                        border-radius: 10px;
-                        color: white;
-                    }
+                    padding: 2rem;
+                    border-radius: 5px;
                 }
                 li:hover {
-                    background-color: #DA00FF;
+                    animation: NavbarHover 1s ease 0s 1 normal forwards;
                 }
+            }
+
+            button {
+                padding: 2rem;
+                font-size: 2rem;
+                background-color: #ff51f2;
+                border: 1px solid #ff51f2;
+                border-radius: 10px;
+                color: white;
             }
         }
     }
 
+}
+
+
+@keyframes NavbarHover {
+    0% {
+        background: none;
+    }
+
+    100% {
+        background-color: #ff51f2;
+    }
 }
