@@ -21,10 +21,10 @@ body {
     background-repeat: no-repeat;
 
     #navbar {
-        width: 90%;
+        width: 95%;
         height: 10rem;
-        margin-left: 5%;
-        margin-right: 5%;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -40,8 +40,8 @@ body {
             }
         }
 
-        #ulContainer {
-            width: 68%;
+        #menuContainer {
+            width: auto;
             height: fit-content;
             display: flex;
             flex-direction: row;
@@ -49,45 +49,58 @@ body {
             align-items: center;
             justify-content: flex-end;
 
-            ul {
+            p {
+                font-size: 2.5rem;
+                padding: 1.5rem;
+                text-align: center;
+                border-right: 1px solid white;
+                position: relative;
+                text-decoration: none;
+            }
 
-                display: flex;
-                flex-direction: row;
-                justify-content: space-evenly;
-                align-items: center;
-                list-style: none;
+            p::before {
+                content: "";
+                position: absolute;
+                display: block;
+                margin-left: 10%;
+                width: 80%;
+                height: 0.2rem;
+                bottom: 0;
+                left: 0;
+                background-color: #0c5460;
+                transform: scaleX(0);
+                transition: transform 0.3s ease;
+            }
 
-                li {
-                    font-size: 2rem;
-                    color: white;
-                    padding: 2rem;
-                    border-radius: 5px;
-                }
-                li:hover {
-                    animation: NavbarHover 1s ease 0s 1 normal forwards;
-                }
+            p:hover::before {
+                transform: scaleX(1);
             }
 
             button {
                 padding: 2rem;
                 font-size: 2rem;
-                background-color: #ff51f2;
-                border: 1px solid #ff51f2;
-                border-radius: 10px;
+                margin-left: 5rem;
+                background: none;
+                border: 1px solid #ff80f6;
+                border-radius: 5px;
                 color: white;
+            }
+
+            button:hover {
+                animation: glowingButton 1s linear infinite alternate;
             }
         }
     }
 
 }
 
-
-@keyframes NavbarHover {
+@keyframes glowingButton {
     0% {
         background: none;
     }
 
     100% {
-        background-color: #ff51f2;
+        box-shadow: 0 0 38px 9px #ff80f6;
+        text-shadow: 0 0 17px white;
     }
 }
