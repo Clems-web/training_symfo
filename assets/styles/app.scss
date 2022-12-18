@@ -11,18 +11,42 @@ body {
     background-color: white;
 }
 
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #ffffff #312f3c;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #312f3c;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+}
+
+
 #container {
     font-size: 3rem;
     color: #0c5460;
     width: 100%;
     height: 100vh;
+    min-height: auto;
     background-image: url("https://wallpaperaccess.com/full/187161.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 
     #navbar {
         width: 95%;
-        height: 10rem;
+        height: fit-content;
         margin-left: 2.5%;
         margin-right: 2.5%;
         display: flex;
@@ -31,12 +55,12 @@ body {
         align-items: center;
 
         #imgContainer {
-            width: 12%;
+            width: auto;
             height: fit-content;
 
             img {
                 width: 100%;
-                height: 9.5rem;
+                height: 12.5rem;
             }
         }
 
@@ -89,6 +113,45 @@ body {
             button:hover {
                 animation: glowingButton 1s linear infinite alternate;
             }
+        }
+    }
+
+    #middlePage {
+        width: 90%;
+        margin-left: 5%;
+        height: 70vh;
+        border: 1px solid #0c1826;
+        border-radius: 5px;
+        margin-top: 5rem;
+        background-color: #0c1826;
+        color: white;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        section {
+            height: 80%;
+            width: 50%;
+            padding: 4rem;
+            border-radius: 50px;
+            background: #0c1826;
+            box-shadow:  20px 20px 77px #050a0f, -20px -20px 77px #13263d;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            p {
+                font-size: 5rem;
+            }
+        }
+
+        #quote {
+            width: 20%;
+        }
+
+        #slider {
+            width: 60%;
         }
     }
 
