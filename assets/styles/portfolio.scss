@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: 'Roboto', sans-serif;
+}
+
+#portfolioContainer {
+  font-size: 3rem;
+  color: white;
+  width: 100%;
+  height: fit-content;
+  min-height: 100vh;
+  background-color: #0a1521;
+
+  #exempleContainer {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 15rem;
+    height: fit-content;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0;
+
+    .exemple {
+      width: 90%;
+      height: fit-content;
+      min-height: 40vh;
+      margin-top: 4rem;
+      padding: 4rem 0;
+      border: 1px solid yellow;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      h3 {
+        text-align: center;
+        font-size: 3rem;
+        font-weight: lighter;
+        margin-bottom: 5rem;
+
+      }
+
+      div {
+        width: 80%;
+        min-height: 20rem;
+        height: fit-content;
+      }
+
+      #parallax {
+        width: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform-style: preserve-3d;
+        transform: perspective(100rem);
+        border: 1px solid #90f4f8;
+        border-radius: 10px;
+        box-shadow: 0 0 18px 1px white;
+
+        p {
+          transform: translateZ(10rem);
+          font-size: 5rem;
+          text-align: center;
+        }
+
+
+      }
+
+      #lightTube {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        p {
+          font-size: 10rem;
+          letter-spacing: 1.5rem;
+          color: #9ce6ef;
+          background: #0a1521;
+          -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
+          line-height: 7rem;
+          outline: none;
+          animation: animate 5s linear infinite;
+        }
+
+      }
+
+    }
+
+  }
+
+
+
+}
+
+@keyframes animate {
+
+  0%, 18%, 20%, 50.1%, 60%, 65.1%, 80%, 90.1%, 92% {
+    color: #9ce6ef;
+    text-shadow: none;
+  }
+  18.1%, 20.1%, 30%, 50%, 60.1%, 65%, 80.1%, 90%, 92.1%, 100% {
+    color: #FFFFFF;
+    text-shadow: 0 0 10px #03bcf4,
+    0 0 20px #03bcf4,
+    0 0 40px #03bcf4,
+    0 0 80px #03bcf4,
+    0 0 160px #03bcf4;
+  }
+
+}

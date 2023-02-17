@@ -1,31 +1,26 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %} Home {% endblock %}
 
 {% block body %}
     <div id="container">
-        <nav id="navbar">
-            <div id="imgContainer">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz8F0fAiUiF60ZAK_M8Svx_4lqz174Fr6f3g&usqp=CAU" alt="logo">
-            </div>
 
-            <div id="menuContainer">
-                <p>Home</p>
-                <p>Who am I ?</p>
-                <p>Portfolio</p>
-                <p>Contact</p>
-                <button>Log in</button>
-            </div>
-        </nav>
+        {% block navbar %}
+            {{ parent() }}
+        {% endblock %}
 
         <div id="middlePage">
 
-            <section id="quote">
-                <p>WORK LESS, PRODUCE MORE</p>
+            <section id="quote" class="js-tilt">
+                <p>"WORK LESS, PRODUCE MORE"</p>
             </section>
 
             <section id="slider">
-                <p>Make a slider here</p>
+                <div>
+                    <i class="fa-solid fa-book-open"></i>
+                    <p>Portfolio</p>
+                </div>
+
             </section>
 
         </div>

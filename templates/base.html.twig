@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport"
               content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script src="https://kit.fontawesome.com/de3d4c2e3d.js" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-        <title>Document !</title>
+        <title>{% block title %} {% endblock %}</title>
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
         {% endblock %}
@@ -16,6 +17,26 @@
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+
+        {% block body %}
+
+            {% block navbar %}
+                <nav id="navbar">
+                    <div id="gearContainer">
+                        <i class="fa-solid fa-gear"></i>
+                        <i class="fa-solid fa-gear" id="secondGear"></i>
+                    </div>
+
+                    <div id="menuContainer">
+                        <p><a href="{{ path('app_home') }}">Home</a></p>
+                        <p>Who am I ?</p>
+                        <p><a href="{{ path('app_portfolio') }}">Portfolio</a> </p>
+                        <p>Contact</p>
+                        <button>Log in</button>
+                    </div>
+                </nav>
+            {% endblock %}
+
+        {% endblock %}
     </body>
 </html>

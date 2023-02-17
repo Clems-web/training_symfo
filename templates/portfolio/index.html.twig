@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Portfolio{% endblock %}
+
+{% block body %}
+
+    <div id="portfolioContainer">
+        {% block navbar %}
+            {{ parent() }}
+        {% endblock %}
+
+        <section id="exempleContainer">
+
+            <div class="exemple">
+                <h3>Parallax</h3>
+                <div id="parallax" class="js-tilt">
+                    <p>3D</p>
+                </div>
+            </div>
+
+
+            <div class="exemple">
+                <h3>Light Tube</h3>
+                <div id="lightTube">
+                    <p>CINEMA</p>
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+
+{% endblock %}
