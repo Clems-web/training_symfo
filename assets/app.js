@@ -10,6 +10,7 @@ import './styles/app.scss';
 import './styles/portfolio.scss';
 
 import './js/tilt';
+import './js/caroussel';
 
 // start the Stimulus application
 import './bootstrap';

@@ -32,11 +32,12 @@
       min-height: 40vh;
       margin-top: 4rem;
       padding: 4rem 0;
-      border: 1px solid yellow;
+      /*border: 1px solid yellow;*/
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      overflow: hidden;
 
       h3 {
         text-align: center;
@@ -86,6 +87,22 @@
           line-height: 7rem;
           outline: none;
           animation: animate 5s linear infinite;
+        }
+
+      }
+
+
+      #imageTrack {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        gap: 4vmin;
+        user-select: none;
+
+
+        .image {
+          object-fit: cover;
+          object-position: 100% center;
         }
 
       }
