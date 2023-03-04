@@ -12,18 +12,17 @@ caroussel.addEventListener('mousemove', (e) => {
 
         const percentage = ((mouseDelta / maxDelta) * -100);
         const nextPercentageUnconstrained = parseFloat(caroussel.dataset.prevPercentage) + percentage;
-        const nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -120);
+        const nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -250);
         caroussel.dataset.percentage = nextPercentage;
-        console.log(nextPercentage)
 
         caroussel.animate({
                 transform: `translateX(${nextPercentage}%)`
-        }, {duration: 1500, fill: "forwards"});
+        }, {duration: 1800, fill: "forwards"});
 
         for(const image of caroussel.getElementsByClassName("image")) {
                 image.animate({
-                        objectPosition: `${100 + nextPercentage}% center`
-                }, {duration: 1200, fill: "forwards"});
+                        objectPosition: `${100 + (nextPercentage * 0.9)}% center`
+                }, {duration: 1800, fill: "forwards"});
         }
 
 });
